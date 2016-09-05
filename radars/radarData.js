@@ -78,6 +78,7 @@ var radar_data = [
         {pc: {r: 282, t: 149}, movement: "c", name: "Knockout.js",},
         {pc: {r: 289, t: 127}, movement: "c", name: "Akka",},
         {pc: {r: 293, t: 167}, movement: "t", name: "Webpack",},
+        {pc: {r: 233, t: 160}, movement: "c", name: "Flight framework", reason: "New front-end JS framework from Twitter. Seems to be generating some interest. URL: <a href='https://flightjs.github.io/'>https://flightjs.github.io/</a>."},
 
         //  Hold 
         {pc: {r: 344, t: 138}, movement: "c", name: "Django",}, 
