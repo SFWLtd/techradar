@@ -1,5 +1,5 @@
 //This is the title for your window tab, and your Radar
-document.title = "SFW's TechRadar (August 2016)";
+document.title = "SFW's TechRadar (October 2016)";
 
 //This is the concentic circles that want on your radar
 var radar_arcs = [
@@ -56,36 +56,38 @@ var radar_data = [
         //  Adopt
         {pc: {r:  30, t: 100}, movement: "c", name: "Spring Boot", topic: "16277305"}, 
         {pc: {r:  38, t: 162}, movement: "c", name: "SASS", topic: "16322377"}, 
-        {pc: {r:  53, t: 140}, movement: "t", name: "Gradle", topic: "11642700", reason: "Configuration management for JVM (Java, Kotlin, Scala) projects"},  
-        {pc: {r:  66, t: 120}, movement: "c", name: "Swagger", reason: "Great tool for documenting APIs and speeding up API development", topic: "13683108" }, 
-        {pc: {r:  70, t: 167}, movement: "c", name: "Thymeleaf", topic: "16277344"}, 
-        {pc: {r:  78, t: 138}, movement: "t", name: "node.js (for micro-services or simple front-ends)", topic: "12342592", reason: "Concerned about its usage for a whole application, but certainly proven benefits for prototyping, simple web applications, and potentially for microservices"}, 
+        {pc: {r:  53, t: 140}, movement: "c", name: "Gradle", topic: "11642700", reason: "Configuration management for JVM (Java, Kotlin, Scala) projects"},  
+        {pc: {r:  66, t: 120}, movement: "c", name: "Swagger", reason: "Great tool for documenting APIs and speeding up API development", topic: "13683108" },
+        {pc: {r:  78, t: 138}, movement: "c", name: "node.js (for micro-services or simple front-ends)", topic: "12342592", reason: "Concerned about its usage for a whole application, but certainly proven benefits for prototyping, simple web applications, and potentially for microservices"}, 
 
         //  Trial
-        {pc: {r: 110, t: 125}, movement: "c", name: "Kotlin", reason: "Used for a number of internal projects. Looks a good option for JVM development for people more comfortable with C#", topic: "12008290"}, 
-        {pc: {r: 132, t: 139}, movement: "c", name: "Grunt", topic: "14740191"}, 
-        {pc: {r: 150, t: 159}, movement: "c", name: "React + Redux", topic: "16277357"}, 
+        {pc: {r: 103, t: 125}, movement: "c", name: "Kotlin", reason: "Used for a number of internal projects. Looks a good option for JVM development for people more comfortable with C#", topic: "12008290"}, 
+        {pc: {r: 132, t: 139}, movement: "t", name: "Gulp", topic: "14740191", reason: "Build system for JS/TS (node) projects. Should go with either this or Grunt"},  
+        {pc: {r: 143, t: 120}, movement: "t", name: "TypeScript", reason: "Prefered choice for Angular2 development and SharePoint Framework. Gaining traction in community", topic: "16277404", }, 
+        {pc: {r: 160, t: 140}, movement: "c", name: "Angular 2.0", topic: "16277359", reason: "Seems pretty simple and powerful following Matthew George's Show & Tell. Less of a learning curve over React"},
         {pc: {r: 180, t: 125}, movement: "c", name: "Scala", topic: "11449457"}, 
+        {pc: {r: 189, t: 137}, movement: "t", name: "Cake (C# Make)",},        
+        {pc: {r: 194, t: 167}, movement: "t", name: "Browser Sync", reason: "Can see obvious potential for prototyping along with Angular"},
 
         //  Assess
-        {pc: {r: 210, t: 115}, movement: "t", name: ".NET Core", topic: "16265842", reason: "Trialling this predominantly with the Travel Desk application in India. Still questions about its maturity, particularly around tooling", investigators: "Dhirajsinh Rajeshirke, Saurabh Soni"}, 
-        {pc: {r: 217, t: 120}, movement: "c", name: "TypeScript", topic: "16277404", }, 
-        {pc: {r: 222, t: 140}, movement: "c", name: "Angular 2.0", topic: "16277359"},
-        {pc: {r: 244, t: 144}, movement: "t", name: "SharePoint framework", topic: "16157669", reason: "New upcoming approach for developing web parts to SharePoint sites"},  
-        {pc: {r: 259, t: 132}, movement: "t", name: "Python", topic: "16322391", reason: "Have seen a number of sales opportunities for Python in the past month"},
-        {pc: {r: 268, t: 162}, movement: "t", name: "Symfony", topic: "16422850", reason: "Have seen a number of sales opportunities for PHP and Symfony over the past month"},
+        {pc: {r: 203, t: 144}, movement: "c", name: "SharePoint framework", topic: "16157669", reason: "New upcoming approach for developing web parts to SharePoint sites"},  
+        {pc: {r: 210, t: 115}, movement: "c", name: ".NET Core", topic: "16265842", reason: "Trialling this predominantly with the Travel Desk application in India. Still questions about its maturity, particularly around tooling", investigators: "Dhirajsinh Rajeshirke, Saurabh Soni"}, 
+        {pc: {r: 222, t: 159}, movement: "t", name: "React + Redux", topic: "16277357", reason: "Initial thoughts are that Angular 2.0 seems a better fit for our needs, and less learning curve than React"},
+        {pc: {r: 233, t: 160}, movement: "c", name: "Flight framework", reason: "New front-end JS framework from Twitter. Seems to be generating some interest. URL: <a href='https://flightjs.github.io/'>https://flightjs.github.io/</a>."},
+        {pc: {r: 259, t: 132}, movement: "c", name: "Python", topic: "16322391", reason: "Have seen a number of sales opportunities for Python in the past month"},
+        {pc: {r: 268, t: 162}, movement: "c", name: "Symfony", topic: "16422850", reason: "Have seen a number of sales opportunities for PHP and Symfony over the past month"},
+        {pc: {r: 270, t: 167}, movement: "t", name: "Thymeleaf", topic: "16277344", reason: "Downgraded due to potentially better JVM MV* frameworks available (like Spark or Grails)"},
         {pc: {r: 274, t: 154}, movement: "c", name: "Ember",}, 
-        {pc: {r: 282, t: 149}, movement: "c", name: "Knockout.js",},
+        {pc: {r: 278, t: 127}, movement: "t", name: "Grails",},
+        {pc: {r: 280, t: 120}, movement: "t", name: "Spark",},
+        {pc: {r: 282, t: 149}, movement: "c", name: "Knockout.js", topic: "17711509"},
+        {pc: {r: 285, t: 159}, movement: "t", name: "TestCafe",},
         {pc: {r: 289, t: 127}, movement: "c", name: "Akka",},
-        {pc: {r: 293, t: 167}, movement: "t", name: "Webpack",},
 
         //  Hold 
-        {pc: {r: 344, t: 138}, movement: "c", name: "Django",}, 
-        {pc: {r: 349, t: 115}, movement: "c", name: ".NET for new bespoke development",}, 
+        {pc: {r: 332, t: 139}, movement: "t", name: "Grunt", topic: "14740191", reason: "Gulp seems to be gaining more traction than Grunt. Gulp now supports sequentially running tasks rendering this less useful."},
         {pc: {r: 370, t: 108}, movement: "c", name: "Ruby-on-Rails",}, 
-        {pc: {r: 372, t: 143}, movement: "t", name: "Play Framework", reason: "Massive difficulties deploying this to Azure have put this on hold"},
-        {pc: {r: 378, t: 133}, movement: "c", name: "Go (lang)",}, 
-        {pc: {r: 388, t: 125}, movement: "c", name: "Java EE",}, 
+        {pc: {r: 372, t: 143}, movement: "c", name: "Play Framework", reason: "Massive difficulties deploying this to Azure have put this on hold"},
         {pc: {r: 390, t:  98}, movement: "c", name: "Elixir + Phoenix",}, 
         {pc: {r: 392, t: 166}, movement: "c", name: "LESS (CSS)",}, 
     ]
@@ -98,10 +100,10 @@ var radar_data = [
         //  Adopt
         {pc: {r:  22, t:  61}, movement: "c", name: "Azure App Services", topic: "12342594"}, 
         {pc: {r:  57, t:  35}, movement: "c", name: "MariaDB",}, 
-        {pc: {r:  83, t:  61}, movement: "c", name: "Joomla!",},
-        
+        {pc: {r:  73, t:  61}, movement: "c", name: "Joomla!",},
+        {pc: {r:  93, t:  58}, movement: "t", name: "VSTS", topic: "11331403", reason: "Successful usage of this for CRM and SharePoint projects. More projects should start adopting this"},
+
         //  Trial
-        {pc: {r: 112, t:  58}, movement: "c", name: "VSTS", topic: "11331403"}, 
         {pc: {r: 118, t:  24}, movement: "c", name: "MongoDB", topic: "11449460"}, 
         {pc: {r: 158, t:  21}, movement: "c", name: "Azure SQL",}, 
         {pc: {r: 188, t:  31}, movement: "c", name: "AWS Lambda & Azure Functions", topic: "16277475"},
@@ -111,12 +113,13 @@ var radar_data = [
         {pc: {r: 225, t:  38}, movement: "t", name: "Cloud Foundry", reason: "Have seen a number of sales opportunities for Cloud Foundry in the past month"}, 
         {pc: {r: 244, t:  42}, movement: "c", name: "Amazon SNS & SQS",}, 
         {pc: {r: 274, t:  14}, movement: "c", name: "Azure DocumentDB",}, 
+        {pc: {r: 283, t:  61}, movement: "c", name: "Drupal 8", reason: "Seen a couple of proposals asking for Drupal experience recently"},
         {pc: {r: 284, t:  78}, movement: "c", name: "Windows Server Nano",}, 
         {pc: {r: 285, t:   5}, movement: "c", name: "Amazon DynamoDB",}, 
-        {pc: {r: 296, t:  38}, movement: "c", name: "Azure Notification Hub",},
+        {pc: {r: 296, t:  38}, movement: "c", name: "Azure Notification Hub",}, 
 
         //  Hold 
-        {pc: {r: 354, t:  78}, movement: "c", name: "Windows Server Deployments",}, 
+        {pc: {r: 354, t:  78}, movement: "c", name: "Windows Server Deployments (for non-.NET developments)",}, 
     ]
 }, {
     "quadrant": "Tools", // t 180-270
@@ -127,13 +130,12 @@ var radar_data = [
         //  Adopt
         {pc: {r:  20, t: 228}, movement: "c", name: "Git", topic: "12342590"},
         {pc: {r:  62, t: 192}, movement: "c", name: "SurveyMonkey", topic: "16276858"}, 
-        {pc: {r:  75, t: 240}, movement: "t", name: "Docker", topic: "14695438", reason: "Seeing many opportunities asking for this, solid usage from internal projects and TEC"}, 
+        {pc: {r:  75, t: 240}, movement: "c", name: "Docker", topic: "14695438", reason: "Seeing many opportunities asking for this, solid usage from internal projects and TEC"}, 
         {pc: {r:  78, t: 208}, movement: "c", name: "Sketch",}, 
         {pc: {r:  88, t: 202}, movement: "c", name: "UXpin",}, 
 
         //  Trial
-        {pc: {r: 123, t: 258}, movement: "c", name: "ELK Stack (ElasticSearch/Logstash/Kibana)", topic: "16322856"}, 
-        {pc: {r: 146, t: 259}, movement: "c", name: "Vagrant",},
+        {pc: {r: 123, t: 258}, movement: "c", name: "ELK Stack (ElasticSearch/Logstash/Kibana)", topic: "16322856"},
         {pc: {r: 160, t: 185}, movement: "c", name: "Balsamiq",}, 
         {pc: {r: 166, t: 190}, movement: "c", name: "Axure",}, 
         {pc: {r: 167, t: 216}, movement: "c", name: "Loop11",}, 
@@ -159,14 +161,15 @@ var radar_data = [
         {pc: {r: 277, t: 220}, movement: "c", name: "Video editing software",},
         {pc: {r: 278, t: 258}, movement: "c", name: "Docker Swarm",}, 
         {pc: {r: 279, t: 253}, movement: "c", name: "Kubernetes", topic: "15585266"}, 
-        {pc: {r: 281, t: 210}, movement: "c", name: "Techsmith Morae",}, 
-        {pc: {r: 283, t: 228}, movement: "c", name: "Rocket.Chat", topic: "16323383", investigators: "Richard Press, David Raine"}, 
+        {pc: {r: 281, t: 210}, movement: "c", name: "Techsmith Morae",},
+        {pc: {r: 291, t: 200}, movement: "t", name: "Pa11y", reason: "Always looking for better tooling for automating Accessibility checking"},  
         {pc: {r: 294, t: 240}, movement: "c", name: "BaseCamp",},
 
         //  Hold
-        {pc: {r: 309, t: 215}, movement: "c", name: "JIRA",}, 
+        {pc: {r: 309, t: 215}, movement: "c", name: "JIRA", reason: "VSTS looks to be the future direction for SFW/Civica"}, 
+        {pc: {r: 316, t: 259}, movement: "t", name: "Vagrant", reason: "Unsure of the value of this with Docker preferred"},
         {pc: {r: 322, t: 252}, movement: "c", name: "Habitat",}, 
-        {pc: {r: 388, t: 259}, movement: "t", name: "Otto", reason: "Didn't take off - deprecated"},
+        {pc: {r: 383, t: 228}, movement: "t", name: "Rocket.Chat", topic: "16323383", reason: "Unsure of value add over TFS/VSTS team rooms", investigators: "Richard Press, David Raine"}, 
         {pc: {r: 390, t: 230}, movement: "c", name: "Nightwatch.js",}, 
         {pc: {r: 399, t: 220}, movement: "c", name: "TFVC (except for CRM)", reason: "Microsoft are mainly using Git in-house now. A lack of dogfooding will likely result in lesser suppot for TFVC in the future"}, 
     ]
@@ -182,7 +185,7 @@ var radar_data = [
         {pc: {r:  56, t: 281}, movement: "c", name: "BDD",}, 
         {pc: {r:  64, t: 343}, movement: "c", name: "Lean UX",}, 
         {pc: {r:  70, t: 288}, movement: "c", name: "TDD", topic: "11979406"}, 
-        {pc: {r:  86, t: 300}, movement: "c", name: "BuildVNext with TFS/VSTS",}, 
+        {pc: {r:  86, t: 300}, movement: "t", name: "Build and Release Management with TFS/VSTS", reason: "Looks promising, Plaza and Home Office are starting to use this, could be a good way of managing releases to environments", investigators: "Nikhil Patel, Adam Londero"}, 
         {pc: {r:  88, t: 336}, movement: "c", name: "Service Design", topic: "16277562"},
         
         //  Trial
@@ -191,15 +194,14 @@ var radar_data = [
         {pc: {r: 176, t: 328}, movement: "c", name: "Eye Tracking",},
 
         //  Assess
-        {pc: {r: 228, t: 335}, movement: "t", name: "VSTS for Release Management", reason: "Looks promising, Plaza are starting to use this, could be a good way of managing releases to environments", investigators: "Nikhil Patel"},
         {pc: {r: 247, t: 316}, movement: "c", name: "Reactive Architectures", topic: "14697886"}, 
         {pc: {r: 262, t: 338}, movement: "c", name: "Backend for Front-Ends",}, 
         {pc: {r: 278, t: 325}, movement: "c", name: "Model-Based Testing",},
-        {pc: {r: 238, t: 345}, movement: "t", name: "CRM collaborative development without relying on TFVC", reason: "As TFVC may become deprecated, relying on this for locking out areas of a CRM system for development to prevent clashes is risky. Need to come up with an alternative approach"},
+        {pc: {r: 238, t: 345}, movement: "c", name: "CRM collaborative development without relying on TFVC", reason: "As TFVC may become deprecated, relying on this for locking out areas of a CRM system for development to prevent clashes is risky. Need to come up with an alternative approach"},
 
         //  Hold 
-        {pc: {r: 358, t: 277}, movement: "c", name: "Native Mobile",}, 
-        {pc: {r: 378, t: 299}, movement: "c", name: "SAFe",}, 
+        {pc: {r: 358, t: 277}, movement: "c", name: "Native Mobile"}, 
+        {pc: {r: 368, t: 321}, movement: "t", name: "Big data & Data analytics", reason: "This is one of IPL's strengths, rather than SFW"}, 
         {pc: {r: 386, t: 330}, movement: "c", name: "XAML builds with TFS",}, 
     ]
 }];
