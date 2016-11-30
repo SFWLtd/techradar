@@ -1,96 +1,55 @@
-<!DOCTYPE html>
-<html>
+---
+layout: default
+title: Introduction to the Tech Radar
+---
+<div id="main_content_wrap" class="outer">
+  <section id="main_content" class="inner">
+    <h3>
+      <a id="introduction-to-techradar" class="anchor" href="#introduction-to-techradar" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Introduction
+      to the SFW TechRadar</h3>
 
-<head>
-  <meta charset='utf-8'>
-  <meta http-equiv="X-UA-Compatible" content="chrome=1">
-  <meta name="description" content="Techradar : SFW&#39;s Technology Radar. Inspired by ThoughtWorks Technology Radar.">
-
-  <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
-
-  <title>SFW TechRadar</title>
-</head>
-
-<body>
-
-  <!-- HEADER -->
-  <div id="header_wrap" class="outer">
-    <header class="inner">
-      <a id="forkme_banner" href="https://github.com/SFWLtd/techradar">View on GitHub</a>
-
-      <h1 id="project_title">SFW TechRadar</h1>
-      <h2 id="project_tagline">SFW&#39;s Technology Radar. Inspired by ThoughtWorks Technology Radar.</h2>
-
-      <section id="downloads">
-        <a class="zip_download_link" href="https://github.com/SFWLtd/techradar/zipball/master">Download this project as a .zip file</a>
-        <a class="tar_download_link" href="https://github.com/SFWLtd/techradar/tarball/master">Download this project as a tar.gz file</a>
-      </section>
-    </header>
-  </div>
-
-  <!-- MAIN CONTENT -->
-  <div id="main_content_wrap" class="outer">
-    <section id="main_content" class="inner">
-      <h3>
-        <a id="introduction-to-techradar" class="anchor" href="#introduction-to-techradar" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Introduction
-        to the SFW TechRadar</h3>
-
-      The TechRadar collates the themes of the month from our various areas of interest (<strong>Back-End and Modern Architectures</strong>,
-      <strong>Front-End</strong>, <strong>User Research</strong> and <strong>DevOps</strong>).
+    The TechRadar collates the themes of the month from our various areas of interest (<strong>Back-End and Modern Architectures</strong>,
+    <strong>Front-End</strong>, <strong>User Research</strong> and <strong>DevOps</strong>).
+    <p>
+    <a href="http://sfwtechradar.azurewebsites.net/">Access the latest version of the TechRadar here</a>
+    <p>
+      The concept of the radar is borrowed from ThoughtWorks who produce their own analysis of the industry on a quarterly basis.
+      The radar is all about tracking interesting things, that are relevant to us as an organisation, primarily doing business
+      with the UK Government abiding by GDS principles. Each item is referred to as a ‘blip’. We organize the blips onto
+      the radar using two categorizing elements: the quadrants and the rings. The quadrants represent different kinds of
+      blips. The rings indicate how "close" these blips are - what stage in an adoption life-cycle we think they should
+      be in The four quadrants are:
+      <ul>
+        <li><strong>Languages and Frameworks</strong> – The libraries and languages we should be using to help complement our deliveries to
+          enable us to deliver faster and more effectively
+        <li><strong>Tools</strong> – Software development tools, eg version control systems, or continuous delivery tooling; User Experience
+          tooling, such as surveying software or tooling for qualitative/quantitative analysis, or more generic categories
+            of tools, eg project collaboration software.
+        <li><strong>Platforms</strong> are things that we build software on top of: for example, virtual platforms like the JVM or generic
+          kinds of platforms like hybrid clouds.
+        <li><strong>Techniques</strong> include elements of a software development process, such as experience design; and ways of structuring
+          software, such as micro-services.
+      </ul>
       <p>
-      <a href="http://sfwtechradar.azurewebsites.net/">Access the latest version of the TechRadar here</a>
-      <p>
-        The concept of the radar is borrowed from ThoughtWorks who produce their own analysis of the industry on a quarterly basis.
-        The radar is all about tracking interesting things, that are relevant to us as an organisation, primarily doing business
-        with the UK Government abiding by GDS principles. Each item is referred to as a ‘blip’. We organize the blips onto
-        the radar using two categorizing elements: the quadrants and the rings. The quadrants represent different kinds of
-        blips. The rings indicate how "close" these blips are - what stage in an adoption life-cycle we think they should
-        be in The four quadrants are:
+        Each ‘blip’ on the graph represents something for an item which has or should have some business value in us either adopting,
+        trialling, assessing or holding off on.
         <ul>
-          <li><strong>Languages and Frameworks</strong> – The libraries and languages we should be using to help complement our deliveries to
-            enable us to deliver faster and more effectively
-          <li><strong>Tools</strong> – Software development tools, eg version control systems, or continuous delivery tooling; User Experience
-            tooling, such as surveying software or tooling for qualitative/quantitative analysis, or more generic categories
-              of tools, eg project collaboration software.
-          <li><strong>Platforms</strong> are things that we build software on top of: for example, virtual platforms like the JVM or generic
-            kinds of platforms like hybrid clouds.
-          <li><strong>Techniques</strong> include elements of a software development process, such as experience design; and ways of structuring
-            software, such as micro-services.
+          <li>The <strong>Adopt</strong> Ring represents blips that we should start or already be using now. That’s not to say you should use
+            these for every project; any tool should only be used in appropriate context. However, we do think that a blip
+            in the adopt ring represents something where there is no doubt that it's proven, has business value for us
+            and is mature for use. As the radar is more for tracking upcoming things, once Blips have proven their maturity
+            and adoption across SFW, they will then drop off the radar.
+          <li>The <strong>Trial</strong> Ring is for blips that we think are ready for use, but not as completely proven as those in the adopt
+            ring. These are items that we should seek opportunities to evaluate through running on Internal Projects
+            or testing out in a low-risk environment (for example as a small component of a larger project)
+          <li>The <strong>Assess</strong> Ring are things that we should look at closely. We believe there is potentially some business
+            value in us using these items, but we should check them out first to assess their maturity, relevance,
+            and in some case make a decision about which substitutional item we adopt (for example we’d typically choose
+            one of Puppet or Chef not both)
+          <li>The <strong>Hold</strong> Ring is for things which are either getting attention but are not ready for use (eg not mature
+            or too big a step at this moment in time), or for those which we may not need to invest as much time
+            in due to low opportunity for use in the near future.
         </ul>
-        <p>
-          Each ‘blip’ on the graph represents something for an item which has or should have some business value in us either adopting,
-          trialling, assessing or holding off on.
-          <ul>
-            <li>The <strong>Adopt</strong> Ring represents blips that we should start or already be using now. That’s not to say you should use
-              these for every project; any tool should only be used in appropriate context. However, we do think that a blip
-              in the adopt ring represents something where there is no doubt that it's proven, has business value for us
-              and is mature for use. As the radar is more for tracking upcoming things, once Blips have proven their maturity
-              and adoption across SFW, they will then drop off the radar.
-            <li>The <strong>Trial</strong> Ring is for blips that we think are ready for use, but not as completely proven as those in the adopt
-              ring. These are items that we should seek opportunities to evaluate through running on Internal Projects
-              or testing out in a low-risk environment (for example as a small component of a larger project)
-            <li>The <strong>Assess</strong> Ring are things that we should look at closely. We believe there is potentially some business
-              value in us using these items, but we should check them out first to assess their maturity, relevance,
-              and in some case make a decision about which substitutional item we adopt (for example we’d typically choose
-              one of Puppet or Chef not both)
-            <li>The <strong>Hold</strong> Ring is for things which are either getting attention but are not ready for use (eg not mature
-              or too big a step at this moment in time), or for those which we may not need to invest as much time
-              in due to low opportunity for use in the near future.
-          </ul>
 
-    </section>
-  </div>
-
-  <!-- FOOTER  -->
-  <div id="footer_wrap" class="outer">
-    <footer class="inner">
-      <p class="copyright">TechRadar maintained by <a href="https://github.com/alondero">@alondero</a>, <a href="https://github.com/SFWLtd">SFWLtd</a></p>
-      <p>Published with <a href="https://pages.github.com">GitHub Pages</a></p>
-    </footer>
-  </div>
-
-
-
-</body>
-
-</html>
+  </section>
+</div>
