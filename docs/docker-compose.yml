@@ -1,6 +1,6 @@
 jekyll:
     image: jekyll/jekyll:pages
-    command: jekyll serve --watch
+    command: jekyll serve --baseurl '' --watch
     ports:
         - 4000:4000
     volumes:
