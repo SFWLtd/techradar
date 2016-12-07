@@ -1,0 +1,27 @@
+---
+layout: default
+---
+<h1>{{ page.name }}</h1>
+<div class="meta"><p>
+    {% if page.status %}<br>Last status: {{page.status}}{% endif %}
+    {% if page.first_added %}<br>First added: {{page.first_added}}{% endif %}
+    {% if page.last_seen %}<br>Last seen: {{page.last_seen}}{% endif %}
+    {% if page.site %}<br><a href="{{page.site}}">{{page.site}}</a>{% endif %}
+</div>
+
+<div class="report">
+  {{ content }}
+</div>
+
+{% if page.yammerid %}
+<script type="text/javascript" src="https://c64.assets-yammer.com/assets/platform_embed.js"></script>
+<div id="embedded-feed" style="height:400px;width:500px;"></div>
+<script>
+    yam.connect.embedFeed({
+        container: '#embedded-feed',
+        network: 'sfwltd.co.uk',
+        feedType: 'topic',
+        feedId: '{{page.yammerid}}'
+    });    
+</script>
+{% endif %}

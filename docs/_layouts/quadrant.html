@@ -1,0 +1,11 @@
+---
+layout: default
+---
+
+	<h1>{{ page.title }}</h1>
+	<ul class="reports">
+
+	  {% for blip in site[page.quadrantcollection] %}
+	    <li><a href="{{site.baseurl}}{{ blip.url }}" title="{{ blip.title }}">{{ blip.title }}</a></li>
+	  {% endfor %}
+	</ul>

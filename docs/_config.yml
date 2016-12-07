@@ -1,3 +1,13 @@
 name: Adam Londero, SFW Ltd.
 markdown: kramdown
 baseurl: /techradar
+
+collections:
+  languagesandframeworks:
+    output: true
+  techniques:
+    output: true
+  tools:
+    output: true
+  platforms:
+    output: true
