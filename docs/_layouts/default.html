@@ -2,30 +2,38 @@
 <html>
     <head>
         <title>{{ page.title }}</title>
-        <!-- link to main stylesheet -->
-        <link rel="stylesheet" type="text/css" href="{{site.baseurl}}/assets/css/bootstrap.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     </head>
     <body>
-        <nav>
-            <ul>
-                <li><a href="{{site.baseurl}}/">Home</a></li>
-                <li><a href="{{site.baseurl}}/reports">Recent Reports</a></li>
-                <li><a href="{{site.baseurl}}/languagesandframeworks.html">Languages and Frameworks</a></li>
-                <li><a href="{{site.baseurl}}/tools">Tools</a></li>
-                <li><a href="{{site.baseurl}}/platforms">Platforms</a></li>
-                <li><a href="{{site.baseurl}}/techniques">Techniques</a></li>
-            </ul>
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <p class="navbar-text"><a href="{{site.baseurl}}/">Home</a></p>
+                    <p class="navbar-text"><a href="{{site.baseurl}}/reports">Recent Reports</a></p>
+                    <p class="navbar-text"><a href="{{site.baseurl}}/languagesandframeworks.html">Languages and Frameworks</a></p>
+                    <p class="navbar-text"><a href="{{site.baseurl}}/tools">Tools</a></p>
+                    <p class="navbar-text"><a href="{{site.baseurl}}/platforms">Platforms</a></p>
+                    <p class="navbar-text"><a href="{{site.baseurl}}/techniques">Techniques</a></p>
+                </div>
+            </div>
         </nav>
         <div class="container">
         
         {{ content }}
         
-        </div><!-- /.container -->
+        </div>
+        
         <footer>
-            <ul>
-                <li><a href="mailto:adaml@sfwltd.co.uk">email</a></li>
-                <li><a href="https://github.com/sfwltd">github.com/sfwltd</a></li>
-            </ul>
+            <nav class="navbar navbar-default">
+                <div class="container-fluid">
+                    <div class="navbar-footer">
+                        <p class="navbar-text"><a href="mailto:adaml@sfwltd.co.uk">email</a></p>
+                        <p class="navbar-text"><a href="https://github.com/sfwltd">github.com/sfwltd</a></p>
+                    </div>
+                </div>
+            </nav>
         </footer>
     </body>
 </html>

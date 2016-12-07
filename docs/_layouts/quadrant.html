@@ -3,9 +3,24 @@ layout: default
 ---
 
 	<h1>{{ page.title }}</h1>
-	<ul class="reports">
+	
 
-	  {% for blip in site[page.quadrantcollection] %}
-	    <li><a href="{{site.baseurl}}{{ blip.url }}" title="{{ blip.title }}">{{ blip.title }}</a></li>
+{% assign adopted = site[page.quadrantcollection] | where: "status", "Adopted" %}
+{% assign adopt = site[page.quadrantcollection] | where: "status", "Adopt" %}
+{% assign trial = site[page.quadrantcollection] | where: "status", "Trial" %}
+{% assign assess = site[page.quadrantcollection] | where: "status", "Assess" %}
+{% assign hold = site[page.quadrantcollection] | where: "status", "Hold" %}
+
+	<h2>Adopted</h2>
+	<ul class="reports">
+    {% for blip in adopted %}
+	    <li><a href="{{site.baseurl}}{{ blip.url }}" title="{{ blip.name }}">{{ blip.name }}</a></li>
+		{% endfor %}
+	</ul>
+
+	<h2>Adopt</h2>
+	<ul class="reports">
+	  {% for blip in adopt %}
+	    <li><a href="{{site.baseurl}}{{ blip.url }}" title="{{ blip.name }}">{{ blip.name }}</a></li>
 	  {% endfor %}
 	</ul>
