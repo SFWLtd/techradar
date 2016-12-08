@@ -107,7 +107,8 @@ var radar_data = [
         //  Trial
         {pc: {r: 118, t:  24}, movement: "c", name: "MongoDB", topic: "11449460"}, 
         {pc: {r: 158, t:  21}, movement: "c", name: "Azure SQL",}, 
-        {pc: {r: 188, t:  31}, movement: "c", name: "AWS Lambda & Azure Functions", topic: "16277475"},
+        {pc: {r: 166, t:  36}, movement: "c", name: "Azure Functions"},
+        {pc: {r: 188, t:  31}, movement: "c", name: "AWS Lambda", docname: "lambda"},
 
         //  Assess 
         {pc: {r: 209, t:  68}, movement: "c", name: "Powershell DSC",},
