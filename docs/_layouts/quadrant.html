@@ -11,16 +11,75 @@ layout: default
 {% assign assess = site[page.quadrantcollection] | where: "status", "Assess" %}
 {% assign hold = site[page.quadrantcollection] | where: "status", "Hold" %}
 
-	<h2>Adopted</h2>
-	<ul class="reports">
-    {% for blip in adopted %}
-	    <li><a href="{{site.baseurl}}{{ blip.url }}" title="{{ blip.name }}">{{ blip.name }}</a></li>
-		{% endfor %}
-	</ul>
-
-	<h2>Adopt</h2>
-	<ul class="reports">
-	  {% for blip in adopt %}
-	    <li><a href="{{site.baseurl}}{{ blip.url }}" title="{{ blip.name }}">{{ blip.name }}</a></li>
-	  {% endfor %}
-	</ul>
+<div class="panel-group" id="accordion">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="#adopted">Adopted</a>
+      </h4>
+    </div>
+		<div id="adopted" class="panel-collapse collapse in">
+			<ul class="list-group">
+				{% for blip in adopted %}
+					<li class="list-group-item"><a href="{{site.baseurl}}{{ blip.url }}" class="list-group-item" title="{{ blip.name }}">{{ blip.name }}</a></li>
+				{% endfor %}
+			</ul>
+		</div>
+	</div>
+	<div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="#adopt">Adopting</a>
+      </h4>
+    </div>
+		<div id="adopt" class="panel-collapse collapse">
+			<ul class="list-group">
+				{% for blip in adopt %}
+					<li class="list-group-item"><a href="{{site.baseurl}}{{ blip.url }}" class="list-group-item" title="{{ blip.name }}">{{ blip.name }}</a></li>
+				{% endfor %}
+			</ul>
+		</div>
+	</div>
+	<div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="#trial">Trialling</a>
+      </h4>
+    </div>
+		<div id="trial" class="panel-collapse collapse">
+			<ul class="list-group">
+				{% for blip in trial %}
+					<li class="list-group-item"><a href="{{site.baseurl}}{{ blip.url }}" class="list-group-item" title="{{ blip.name }}">{{ blip.name }}</a></li>
+				{% endfor %}
+			</ul>
+		</div>
+	</div>
+	<div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="#assess">Assessing</a>
+      </h4>
+    </div>
+		<div id="assess" class="panel-collapse collapse">
+			<ul class="list-group">
+				{% for blip in assess %}
+					<li class="list-group-item"><a href="{{site.baseurl}}{{ blip.url }}" class="list-group-item" title="{{ blip.name }}">{{ blip.name }}</a></li>
+				{% endfor %}
+			</ul>
+		</div>
+	</div>
+	<div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="#hold">On Hold</a>
+      </h4>
+    </div>
+		<div id="hold" class="panel-collapse collapse">
+			<ul class="list-group">
+				{% for blip in hold %}
+					<li class="list-group-item"><a href="{{site.baseurl}}{{ blip.url }}" class="list-group-item" title="{{ blip.name }}">{{ blip.name }}</a></li>
+				{% endfor %}
+			</ul>
+		</div>
+	</div>
+</div>
