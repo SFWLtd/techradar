@@ -99,26 +99,26 @@ var radar_data = [
     "color": "#CB6015",
     "items": [
         //  Adopt
-        {pc: {r:  22, t:  61}, movement: "c", name: "Azure App Services", topic: "12342594"}, 
+        {pc: {r:  22, t:  61}, movement: "c", name: "Azure App Services", docname: "azure-app-services"}, 
         {pc: {r:  57, t:  35}, movement: "c", name: "MariaDB",}, 
-        {pc: {r:  73, t:  61}, movement: "c", name: "Joomla!",},
-        {pc: {r:  93, t:  58}, movement: "t", name: "VSTS", topic: "11331403", reason: "Successful usage of this for CRM and SharePoint projects. More projects should start adopting this"},
+        {pc: {r:  73, t:  61}, movement: "c", name: "Joomla!", docname: "joomla"},
+        {pc: {r:  93, t:  58}, movement: "t", name: "VSTS"},
 
         //  Trial
-        {pc: {r: 118, t:  24}, movement: "c", name: "MongoDB", topic: "11449460"}, 
-        {pc: {r: 158, t:  21}, movement: "c", name: "Azure SQL",}, 
-        {pc: {r: 166, t:  36}, movement: "c", name: "Azure Functions"},
+        {pc: {r: 118, t:  24}, movement: "c", name: "MongoDB"}, 
+        {pc: {r: 158, t:  21}, movement: "c", name: "Azure SQL", docname: "azure-sqldb"}, 
+        {pc: {r: 166, t:  36}, movement: "c", name: "Azure Functions", docname: "azure-functions"},
         {pc: {r: 188, t:  31}, movement: "c", name: "AWS Lambda", docname: "lambda"},
 
         //  Assess 
-        {pc: {r: 209, t:  68}, movement: "c", name: "Powershell DSC",},
-        {pc: {r: 225, t:  38}, movement: "t", name: "Cloud Foundry", reason: "Have seen a number of sales opportunities for Cloud Foundry in the past month"}, 
-        {pc: {r: 244, t:  42}, movement: "c", name: "Amazon SNS & SQS",}, 
-        {pc: {r: 274, t:  14}, movement: "c", name: "Azure DocumentDB",}, 
-        {pc: {r: 283, t:  61}, movement: "c", name: "Drupal 8", reason: "Seen a couple of proposals asking for Drupal experience recently"},
-        {pc: {r: 284, t:  78}, movement: "c", name: "Windows Server Nano",}, 
-        {pc: {r: 285, t:   5}, movement: "c", name: "Amazon DynamoDB",}, 
-        {pc: {r: 296, t:  38}, movement: "c", name: "Azure Notification Hub",}, 
+        {pc: {r: 209, t:  68}, movement: "c", name: "Powershell DSC", docname: "powershell-dsc"},
+        {pc: {r: 225, t:  38}, movement: "t", name: "Cloud Foundry", docname: "cloud-foundry"}, 
+        {pc: {r: 244, t:  42}, movement: "c", name: "Amazon SQS", docname: "aws-sqs"},
+        {pc: {r: 247, t:  48}, movement: "c", name: "Amazon SNS", docname: "aws-sns"},
+        {pc: {r: 274, t:  14}, movement: "c", name: "Azure DocumentDB", docname: "azure-documentdb"}, 
+        {pc: {r: 283, t:  61}, movement: "c", name: "Drupal 8", docname: "drupal"},
+        {pc: {r: 284, t:  78}, movement: "c", name: "Windows Server Nano", docname: "windows-server-nano"}, 
+        {pc: {r: 285, t:   5}, movement: "c", name: "Amazon DynamoDB", docname: "aws-dynamodb"},  
 
         //  Hold 
         {pc: {r: 354, t:  78}, movement: "c", name: "Windows Server Deployments (for non-.NET developments)",}, 
