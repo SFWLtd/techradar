@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>{{ page.title }}</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+        <link rel="stylesheet" href="{{site.baseurl}}/assets/css/main.css">
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.js"></script>
+        <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.0/themes/smoothness/jquery-ui.css">
+        <script type="text/javascript" src="{{site.baseurl}}/assets/lib/protovis-3.2/protovis-d3.2.js"></script>
+        <script type="text/javascript" charset="utf-8" src="{{site.baseurl}}/assets/js/utils.js"></script>
+        <script type="text/javascript" charset="utf-8" src="{{site.baseurl}}/assets/lib/lodash.underscore.min.js"></script>
+        <script type="text/javascript" charset="utf-8" src="{{site.baseurl}}/assets/js/radarData.js"></script>
+        
+        <style type="text/css" media="screen">
+            #fig {
+            height: 1000px;
+            width: 1200px;
+            }
+        </style>
+
+        <script>
+        function init(h, w) {
+
+            //Quadrant Ledgends
+            var radar_quadrant_ctr = 1;
+            var quadrantFontSize = 18;
+            var headingFontSize = 14;
+            var stageHeadingCount = 0;
+            var lastRadius = 0;
+            var lastQuadrant = '';
+            var spacer = 6;
+            var fontSize = 10;
+            var total_index = 1;
+            var legendColor = '#E1056D';
+
+            $('#title').text(document.title);
+
+            var legend = new pv.Panel()
+                .width(w)
+                .height(h / 10)
+                .canvas('legend')
+
+            legend.add(pv.Label)
+                .left(50)
+                .top(30)
+                .text('Legend')
+                .strokeStyle('#cccccc')
+                .fillStyle('#cccccc')
+                .font(quadrantFontSize + "px Arial")
+
+            legend.add(pv.Dot)
+                .shape('circle')
+                .left(50)
+                .top(50)
+                .strokeStyle(legendColor)
+                .fillStyle(legendColor)
+                .add(pv.Label)
+                .text('Little change this month')
+                .font(headingFontSize + "px Arial")
+                .textBaseline('middle')
+                .textMargin(10)
+                .root.render();
+            
+            legend.add(pv.Dot)
+                .shape('triangle')
+                .angle(Math.PI)
+                .left(50)
+                .top(70)
+                .strokeStyle(legendColor)
+                .fillStyle(legendColor)
+                .add(pv.Label)
+                .text('Recent change')
+                .font(headingFontSize + "px Arial")
+                .textBaseline('middle')
+                .textMargin(10)
+                .root.render();
+
+
+            var radar = new pv.Panel()
+                .width(w)
+                .height(h)
+                .canvas('radar')
+
+            // arcs
+            radar.add(pv.Dot)
+                .data(radar_arcs)
+                .left(w / 2)
+                .bottom(h / 2)
+                .radius(function (d) { return d.r; })
+                .strokeStyle("#ccc")
+                .anchor("top")
+                .add(pv.Label).text(function (d) { return d.name; });
+
+            //quadrant lines -- vertical
+            radar.add(pv.Line)
+                .data([(h / 2 - radar_arcs[radar_arcs.length - 1].r), h - (h / 2 - radar_arcs[radar_arcs.length - 1].r)])
+                .lineWidth(1)
+                .left(w / 2)
+                .bottom(function (d) { return d; })
+                .strokeStyle("#bbb");
+
+            //quadrant lines -- horizontal
+            radar.add(pv.Line)
+                .data([(w / 2 - radar_arcs[radar_arcs.length - 1].r), w - (w / 2 - radar_arcs[radar_arcs.length - 1].r)])
+                .lineWidth(1)
+                .bottom(h / 2)
+                .left(function (d) { return d; })
+                .strokeStyle("#bbb");
+
+
+            // blips
+            // var total_index=1;
+            // for (var i = 0; i < radar_data.length; i++) {
+            //     radar.add(pv.Dot)       
+            //     .def("active", false)
+            //     .data(radar_data[i].items)
+            //     .size( function(d) { return ( d.blipSize !== undefined ? d.blipSize : 70 ); })
+            //     .left(function(d) { var x = polar_to_raster(d.pc.r, d.pc.t)[0];
+            //                         //console.log("name:" + d.name + ", x:" + x); 
+            //                         return x;})
+            //     .bottom(function(d) { var y = polar_to_raster(d.pc.r, d.pc.t)[1];                                 
+            //                           //console.log("name:" + d.name + ", y:" + y); 
+            //                           return y;})
+            //     .title(function(d) { return d.name;})		 
+            //     .cursor( function(d) { return ( d.url !== undefined ? "pointer" : "auto" ); })                                                            
+            //     .event("click", function(d) { if ( d.url !== undefined ){self.location =  d.url}}) 
+            //     .angle(Math.PI)  // 180 degrees in radians !
+            //     .strokeStyle(radar_data[i].color)
+            //     .fillStyle(radar_data[i].color)
+            //     .shape(function(d) {return (d.movement === 't' ? "triangle" : "circle");})         
+            //     .anchor("center")
+            //         .add(pv.Label)
+            //         .text(function(d) {return total_index++;}) 
+            //         .textBaseline("middle")
+            //         .textStyle("white");            
+            // }
+
+            //TODO: Super fragile: re-order the items, by radius, in order to logically group by the rings.
+            for (var i = 0; i < radar_data.length; i++) {
+                //adjust top by the number of headings.
+                if (lastQuadrant != radar_data[i].quadrant) {
+                    radar.add(pv.Label)
+                        .left(radar_data[i].left)
+                        .top(radar_data[i].top)
+                        .text(radar_data[i].quadrant)
+                        .strokeStyle(radar_data[i].color)
+                        .fillStyle(radar_data[i].color)
+                        .font(quadrantFontSize + "px Arial");
+
+                    lastQuadrant = radar_data[i].quadrant;
+
+                }
+
+                // group items by stage based on how far they are from each arc
+                var itemsByStage = _.groupBy(radar_data[i].items, function (item) {
+                    for (var arc_i = 0; arc_i < radar_arcs.length; arc_i++) {
+                        if (item.pc.r < radar_arcs[arc_i].r) {
+                            return arc_i;
+                        }
+                    }
+                    return 0;
+                });
+
+                var offsetIndex = 0;
+                for (var stageIdx in _(itemsByStage).keys()) {
+
+                    if (stageIdx > 0) {
+                        console.log("stageIdx = " + stageIdx)
+                        console.log("itemsByStage.length = " + itemsByStage.length)
+                        console.log("itemsByStage[stageIdx-1] = " + itemsByStage[stageIdx - 1])
+                        offsetIndex = offsetIndex + itemsByStage[stageIdx - 1].length + 1;
+                        console.log("offsetIndex = " + itemsByStage[stageIdx - 1].length, offsetIndex);
+                    }
+
+                    radar.add(pv.Label)
+                        .left(radar_data[i].left + headingFontSize)
+                        .top(radar_data[i].top + quadrantFontSize + spacer + (stageIdx * headingFontSize) + (offsetIndex * fontSize))
+                        .text(radar_arcs[stageIdx].name)
+                        .strokeStyle('#cccccc')
+                        .fillStyle('#cccccc')
+                        .font(headingFontSize + "px Arial");
+
+                    radar.add(pv.Label)
+                        .left(radar_data[i].left)
+                        .top(radar_data[i].top + quadrantFontSize + spacer + (stageIdx * headingFontSize) + (offsetIndex * fontSize))
+                        .strokeStyle(radar_data[i].color)
+                        .fillStyle(radar_data[i].color)
+                        .add(pv.Dot)
+                        .def("i", radar_data[i].top + quadrantFontSize + spacer + (stageIdx * headingFontSize) + spacer + (offsetIndex * fontSize))
+                        .data(itemsByStage[stageIdx])
+                        .top(function () { return (this.i() + (this.index * fontSize)); })
+                        .shape(function (d) { return (d.movement === 't' ? "triangle" : "circle"); })
+                        //.cursor(function (d) { return (d.url !== undefined ? "pointer" : "auto"); })
+                        .cursor("auto")
+                        .event("click", function (d) { 
+                            var name = d.name
+                            if (d.docname !== undefined) {
+                                name = d.docname
+                            }
+                            location.href = "{{site.baseurl}}"+name+".html"; 
+                        })
+                        .size(fontSize)
+                        .angle(45)
+                        .anchor("right")
+                        .add(pv.Label)
+                        .text(function (d) { return radar_quadrant_ctr++ + ". " + d.name; });
+
+                    radar.add(pv.Dot)
+                        .def("active", false)
+                        .data(itemsByStage[stageIdx])
+                        .size(function (d) { return (d.blipSize !== undefined ? d.blipSize : 70); })
+                        .angle(50)
+                        .left(function (d) {
+                            var x = polar_to_raster(d.pc.r, d.pc.t)[0];
+                            return x;
+                        })
+                        .bottom(function (d) {
+                            var y = polar_to_raster(d.pc.r, d.pc.t)[1];
+                            return y;
+                        })
+                        .title(function (d) { return d.name; })
+                        //.cursor(function (d) { return (d.url !== undefined ? "pointer" : "auto"); })
+                        .cursor("pointer")
+                        .event("click", function (d) { 
+                            var name = d.name
+                            if (d.docname !== undefined) {
+                                name = d.docname
+                            }
+                            location.href = "{{site.baseurl}}"+name+".html"; 
+                        })
+                        .angle(Math.PI)  // 180 degrees in radians !
+                        .strokeStyle(radar_data[i].color)
+                        .fillStyle(radar_data[i].color)
+                        .shape(function (d) { return (d.movement === 't' ? "triangle" : "circle"); })
+                        .anchor("center")
+                        .add(pv.Label)
+                        .text(function (d) { return total_index++; })
+                        .textBaseline("middle")
+                        .textStyle("white");
+
+
+                }
+            }
+
+            radar.anchor('radar');
+            radar.render();
+        };
+        </script>
+
+    </head>
+    <body onload="init(h,w);">
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="#">SFW TechRadar</a>
+                </div>
+                <div class="navbar-header">
+                    <p class="navbar-text"><a href="{{site.baseurl}}/">Home</a></p>
+                    <p class="navbar-text"><a href="http://sfwtechradar.azurewebsites.net/">Radar</a></p>
+                    <p class="navbar-text"><a href="{{site.baseurl}}/radar">New Radar</a></p>
+                    <p class="navbar-text"><a href="{{site.baseurl}}/reports">Recent Reports</a></p>
+                    <p class="navbar-text"><a href="{{site.baseurl}}/languagesandframeworks.html">Languages and Frameworks</a></p>
+                    <p class="navbar-text"><a href="{{site.baseurl}}/tools">Tools</a></p>
+                    <p class="navbar-text"><a href="{{site.baseurl}}/platforms">Platforms</a></p>
+                    <p class="navbar-text"><a href="{{site.baseurl}}/techniques">Techniques</a></p>
+                </div>
+            </div>
+        </nav>
+        <div class="container">
+            <div id="dialog" title="SFW's TechRadar" style="font-size: small;" ></div>
+            <div id="radar"></div>
+            <h2 id="legend"></h2>
+
+            <script>
+            $( "#dialog" ).dialog({ 
+                autoOpen: false, 
+                closeOnEscape: true, 
+                position: { my: "center", at: "center", of: window, collision:"fit" }, 
+                buttons: [ { text: "Close", click: function() { $( this ).dialog( "close" ); } } ] 
+                });
+            </script> 
+        </div>
+        
+        <footer>
+            <nav class="navbar navbar-default">
+                <div class="container-fluid">
+                    <div class="navbar-footer">
+                        <p class="navbar-text"><a href="mailto:adaml@sfwltd.co.uk">email</a></p>
+                        <p class="navbar-text"><a href="https://github.com/sfwltd">github.com/sfwltd</a></p>
+                    </div>
+                </div>
+            </nav>
+        </footer>
+    </body>
+</html>
