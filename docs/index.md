@@ -2,6 +2,7 @@
 layout: default
 title: Introduction to the Tech Radar
 ---
+
 Introduction to the SFW TechRadar
 =================================
 
