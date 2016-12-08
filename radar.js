@@ -194,7 +194,13 @@ function init(h, w) {
                 .title(function (d) { return d.name; })
                 //.cursor(function (d) { return (d.url !== undefined ? "pointer" : "auto"); })
                 .cursor("pointer")
-                .event("click", function (d) { showInfoPopup(d.name, d.reason, d.topic, d.investigators, d.pc.r) })
+                .event("click", function (d) { 
+                    var name = d.name
+                    if (d.docname !== undefined) {
+                        name = d.docname
+                    }
+                    location.href = "https://sfwltd.github.io/techradar/"+name+".html"; 
+                })
                 .angle(Math.PI)  // 180 degrees in radians !
                 .strokeStyle(radar_data[i].color)
                 .fillStyle(radar_data[i].color)

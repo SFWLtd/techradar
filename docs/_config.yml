@@ -5,9 +5,13 @@ baseurl: /techradar
 collections:
   languagesandframeworks:
     output: true
+    permalink: /:name
   techniques:
     output: true
+    permalink: /:name
   tools:
     output: true
+    permalink: /:name
   platforms:
     output: true
+    permalink: /:name

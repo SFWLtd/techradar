@@ -7,3 +7,4 @@ last_seen: "October 2016"
 yammerid: 11642700
 site: https://gradle.org/
 ---
+Configuration management for JVM (Java, Kotlin, Scala) projects
