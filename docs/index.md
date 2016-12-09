@@ -9,7 +9,7 @@ Introduction to the SFW TechRadar
 The TechRadar collates the themes of the month from our various areas of interest 
 (*Back-End and Modern Architectures*, *Front-End*, *User Research* and *DevOps*).
 
-[Access the latest version of the TechRadar here](http://sfwtechradar.azurewebsites.net/)
+[Access the latest version of the TechRadar here]({{site.baseurl}}/radar)
 
 The concept of the radar is borrowed from ThoughtWorks who produce their own analysis of the industry on a quarterly basis. The radar is all about tracking interesting things, that are relevant to us as an organisation, primarily doing business with the UK Government abiding by GDS principles. Each item is referred to as a ‘blip’. We organize the blips onto the radar using two categorizing elements: the quadrants and the rings. The quadrants represent different kinds of blips. The rings indicate how "close" these blips are - what stage in an adoption life-cycle we think they should be in. 
 
