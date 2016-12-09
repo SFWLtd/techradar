@@ -45,7 +45,7 @@ var w = 1200;
 
 var radar_data = [
   {
-    "quadrant": "Languages & Frameworks", // t 90-180
+    "quadrant": "Languages and Frameworks", // t 90-180
     "left": 45,
     "top": 18,
     "color": "#00A499",
@@ -110,7 +110,7 @@ var radar_data = [
 
         //  Hold
         {pc: {r: 318, t:  24}, movement: "t", name: "MongoDB"},  
-        {pc: {r: 354, t:  78}, movement: "c", name: "Windows Server Deployments (for non-.NET developments)", docname: "windows-server-deployments"}, 
+        {pc: {r: 354, t:  78}, movement: "c", name: "Manual Windows Server Deployments", docname: "windows-server-deployments"}, 
     ]
 }, {
     "quadrant": "Tools", // t 180-270
@@ -157,7 +157,7 @@ var radar_data = [
     "items": [
         //  Adopt
         {pc: {r:  64, t: 343}, movement: "c", name: "Lean UX", docname: "lean-ux"}, 
-        {pc: {r:  86, t: 300}, movement: "c", name: "Build and Release Management with TFS/VSTS", docname: "build-release-management-vsts"}, 
+        {pc: {r:  86, t: 300}, movement: "c", name: "Build & Release Management with TFS/VSTS", docname: "build-release-management-vsts"}, 
         {pc: {r:  88, t: 336}, movement: "c", name: "Service Design"},
         
         //  Trial
