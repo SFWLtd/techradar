@@ -1,7 +1,7 @@
 ---
 layout: blip
 name: "Python"
-status: "Trial"
+status: "Assess"
 first_added: "August 2016"
 yammerid: 16322391
 site: https://www.python.org/

@@ -9,6 +9,7 @@ layout: default
 {% assign adopt = site[page.quadrantcollection] | where: "status", "Adopt" %}
 {% assign trial = site[page.quadrantcollection] | where: "status", "Trial" %}
 {% assign assess = site[page.quadrantcollection] | where: "status", "Assess" %}
+{% assign archive = site[page.quadrantcollection] | where: "status", "Archived" %}
 {% assign hold = site[page.quadrantcollection] | where: "status", "Hold" %}
 
 <div class="panel-group" id="accordion">
@@ -63,6 +64,20 @@ layout: default
 		<div id="assess" class="panel-collapse collapse">
 			<ul class="list-group">
 				{% for blip in assess %}
+					<li class="list-group-item"><a href="{{site.baseurl}}{{ blip.url }}" class="list-group-item" title="{{ blip.name }}">{{ blip.name }}</a></li>
+				{% endfor %}
+			</ul>
+		</div>
+	</div>
+	<div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="#archived">Archived</a>
+      </h4>
+    </div>
+		<div id="archived" class="panel-collapse collapse">
+			<ul class="list-group">
+				{% for blip in archive %}
 					<li class="list-group-item"><a href="{{site.baseurl}}{{ blip.url }}" class="list-group-item" title="{{ blip.name }}">{{ blip.name }}</a></li>
 				{% endfor %}
 			</ul>

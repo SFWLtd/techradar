@@ -1,7 +1,7 @@
 ---
 layout: blip
 name: "Node.js"
-status: "Adopted"
+status: "Adopt"
 first_added: "July 2016"
 yammerid: 12342592
 site: https://nodejs.org/en/

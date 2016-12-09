@@ -6,7 +6,7 @@ collections:
   languagesandframeworks:
     output: true
     permalink: /:name
-  techniques:
+  approaches:
     output: true
     permalink: /:name
   tools:

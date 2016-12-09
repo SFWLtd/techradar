@@ -1,7 +1,7 @@
 ---
 layout: blip
 name: "Drupal"
-status: "Trial"
+status: "Assess"
 first_added: "August 2016"
 site: https://www.drupal.org/
 ---

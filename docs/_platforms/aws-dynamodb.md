@@ -1,7 +1,7 @@
 ---
 layout: blip
 name: "AWS DynamoDB"
-status: "Trial"
+status: "Assess"
 first_added: "July 2016"
 site: https://aws.amazon.com/dynamodb
 ---

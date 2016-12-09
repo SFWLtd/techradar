@@ -1,7 +1,7 @@
 ---
 layout: blip
 name: "Windows Server 2016 Nano"
-status: "Trial"
+status: "Assess"
 first_added: "August 2016"
 site: https://technet.microsoft.com/en-us/windows-server-docs/get-started/getting-started-with-nano-server
 ---
