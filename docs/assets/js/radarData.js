@@ -175,28 +175,26 @@ var radar_data = [
     "top": (h / 2 + 18),
     "items": [
         //  Adopt
-        {pc: {r:  44, t: 340}, movement: "c", name: "User-Centred Design",},
-        {pc: {r:  47, t: 311}, movement: "c", name: "Responsive Design",}, 
+        {pc: {r:  44, t: 340}, movement: "c", name: "User-Centred Design", docname: "user-centred-design"},
+        {pc: {r:  47, t: 311}, movement: "c", name: "Responsive Design", docname: "responsive-design"}, 
         {pc: {r:  56, t: 281}, movement: "c", name: "BDD",}, 
-        {pc: {r:  64, t: 343}, movement: "c", name: "Lean UX",}, 
-        {pc: {r:  70, t: 288}, movement: "c", name: "TDD", topic: "11979406"}, 
-        {pc: {r:  86, t: 300}, movement: "t", name: "Build and Release Management with TFS/VSTS", reason: "Looks promising, Plaza and Home Office are starting to use this, could be a good way of managing releases to environments", investigators: "Nikhil Patel, Adam Londero"}, 
-        {pc: {r:  88, t: 336}, movement: "c", name: "Service Design", topic: "16277562"},
+        {pc: {r:  64, t: 343}, movement: "c", name: "Lean UX", docname: "lean-ux"}, 
+        {pc: {r:  70, t: 288}, movement: "c", name: "TDD"}, 
+        {pc: {r:  86, t: 300}, movement: "t", name: "Build and Release Management with TFS/VSTS", docname: "build-release-management-vsts"}, 
+        {pc: {r:  88, t: 336}, movement: "c", name: "Service Design"},
         
         //  Trial
-        {pc: {r: 110, t: 325}, movement: "c", name: "Session-Based Testing", topic: "16277512"}, 
-        {pc: {r: 152, t: 358}, movement: "c", name: "Micro-service architecture", topic: "15379550"}, 
-        {pc: {r: 176, t: 328}, movement: "c", name: "Eye Tracking",},
+        {pc: {r: 110, t: 325}, movement: "c", name: "Session-Based Testing", docname: "sbtm"}, 
+        {pc: {r: 152, t: 358}, movement: "c", name: "Micro-service architecture", docname: "microservice-architectures"}, 
+        {pc: {r: 176, t: 328}, movement: "c", name: "Eye Tracking", docname: "eye-tracking"},
 
         //  Assess
-        {pc: {r: 247, t: 316}, movement: "c", name: "Reactive Architectures", topic: "14697886"}, 
-        {pc: {r: 262, t: 338}, movement: "c", name: "Backend for Front-Ends",}, 
-        {pc: {r: 278, t: 325}, movement: "c", name: "Model-Based Testing",},
-        {pc: {r: 238, t: 345}, movement: "c", name: "CRM collaborative development without relying on TFVC", reason: "As TFVC may become deprecated, relying on this for locking out areas of a CRM system for development to prevent clashes is risky. Need to come up with an alternative approach"},
+        {pc: {r: 247, t: 316}, movement: "c", name: "Reactive Architectures", docname: "reactive-architectures"}, 
+        {pc: {r: 262, t: 338}, movement: "c", name: "Backend for Front-Ends", docname: "backend-for-frontends"}, 
+        {pc: {r: 278, t: 325}, movement: "c", name: "Model-Based Testing", docname: "model-based-testing"},
+        {pc: {r: 238, t: 345}, movement: "c", name: "CRM collaborative development without relying on TFVC", docname: "crm-collaborative-development-without-tfvc"},
 
         //  Hold 
-        {pc: {r: 358, t: 277}, movement: "c", name: "Native Mobile"}, 
-        {pc: {r: 368, t: 321}, movement: "t", name: "Big data & Data analytics", reason: "This is one of IPL's strengths, rather than SFW"}, 
-        {pc: {r: 386, t: 330}, movement: "c", name: "XAML builds with TFS",}, 
+        {pc: {r: 358, t: 277}, movement: "c", name: "Native Mobile", docname: "native-mobile"},
     ]
 }];
