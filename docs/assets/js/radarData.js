@@ -118,7 +118,7 @@ var radar_data = [
         {pc: {r: 285, t:   5}, movement: "c", name: "Amazon DynamoDB", docname: "aws-dynamodb"},  
 
         //  Hold 
-        {pc: {r: 354, t:  78}, movement: "c", name: "Windows Server Deployments (for non-.NET developments)",}, 
+        {pc: {r: 354, t:  78}, movement: "c", name: "Windows Server Deployments (for non-.NET developments)", docname: "windows-server-deployments"}, 
     ]
 }, {
     "quadrant": "Tools", // t 180-270
@@ -148,7 +148,7 @@ var radar_data = [
         {pc: {r: 216, t: 266}, movement: "c", name: "Puppet",}, 
         {pc: {r: 223, t: 220}, movement: "c", name: "Tobii Eyetracker", docname: "tobii"},
         {pc: {r: 232, t: 184}, movement: "c", name: "Jenkins 2.0", docname: "jenkins2"}, 
-        {pc: {r: 243, t: 258}, movement: "c", name: "New Relic",}, 
+        {pc: {r: 243, t: 258}, movement: "c", name: "New Relic", docname: "new-relic"}, 
         {pc: {r: 250, t: 204}, movement: "c", name: "Protractor",}, 
         {pc: {r: 250, t: 220}, movement: "c", name: "Spectre",}, 
         {pc: {r: 255, t: 189}, movement: "c", name: "Concourse",}, 
