@@ -195,7 +195,7 @@
                         //.cursor(function (d) { return (d.url !== undefined ? "pointer" : "auto"); })
                         .cursor("auto")
                         .event("click", function (d) { 
-                            var name = d.name
+                            var name = d.name.toLowerCase()
                             if (d.docname !== undefined) {
                                 name = d.docname
                             }
@@ -224,7 +224,7 @@
                         //.cursor(function (d) { return (d.url !== undefined ? "pointer" : "auto"); })
                         .cursor("pointer")
                         .event("click", function (d) { 
-                            var name = d.name
+                            var name = d.name.toLowerCase()
                             if (d.docname !== undefined) {
                                 name = d.docname
                             }
