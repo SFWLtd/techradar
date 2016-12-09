@@ -137,7 +137,8 @@ var radar_data = [
         {pc: {r: 267, t: 225}, movement: "c", name: "NVivo suite", docname: "nvivo"}, 
         {pc: {r: 269, t: 190}, movement: "c", name: "LambdaCD",},
         {pc: {r: 279, t: 253}, movement: "c", name: "Kubernetes"},
-        {pc: {r: 282, t: 240}, movement: "t", name: "Habitat",}, 
+        {pc: {r: 282, t: 240}, movement: "t", name: "Habitat",},
+        {pc: {r: 288, t: 250}, movement: "t", name: "Terraform",},  
         {pc: {r: 291, t: 200}, movement: "c", name: "Pa11y"},
 
         //  Hold
