@@ -54,11 +54,11 @@ var radar_data = [
         {pc: {r:  30, t:  96}, movement: "c", name: "Spring Boot", docname:"spring-boot"}, 
         {pc: {r:  58, t: 138}, movement: "c", name: "node.js (for micro-services or simple front-ends)", docname:"nodejs"}, 
         {pc: {r:  65, t: 100}, movement: "t", name: "Angular 2.0", docname:"angular2"},
-        {pc: {r:  82, t: 155}, movement: "t", name: "Kotlin"}, 
         {pc: {r:  93, t: 119}, movement: "t", name: "Gulp"},  
         {pc: {r:  98, t: 160}, movement: "t", name: "TypeScript"}, 
 
         //  Trial
+        {pc: {r: 112, t: 155}, movement: "c", name: "Kotlin"},          
         {pc: {r: 140, t: 115}, movement: "t", name: ".NET Core", docname: "dotnet-core"}, 
         {pc: {r: 167, t: 144}, movement: "t", name: "SharePoint framework", docname: "sharepoint-framework"},  
         {pc: {r: 180, t: 125}, movement: "c", name: "Scala"}, 
