@@ -1,6 +1,6 @@
 ---
 layout: blip
-name: "Angular2"
+name: "Angular"
 status: "Adopt"
 first_added: "July 2016"
 yammerid: 16277359

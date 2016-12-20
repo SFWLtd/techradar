@@ -53,7 +53,7 @@ var radar_data = [
         //  Adopt
         {pc: {r:  30, t:  96}, movement: "c", name: "Spring Boot", docname:"spring-boot"}, 
         {pc: {r:  58, t: 138}, movement: "c", name: "node.js (for micro-services or simple front-ends)", docname:"nodejs"}, 
-        {pc: {r:  65, t: 100}, movement: "t", name: "Angular 2.0", docname:"angular2"},
+        {pc: {r:  65, t: 100}, movement: "t", name: "Angular", docname:"angular"},
         {pc: {r:  93, t: 119}, movement: "t", name: "Gulp"},  
         {pc: {r:  98, t: 160}, movement: "t", name: "TypeScript"}, 
 
