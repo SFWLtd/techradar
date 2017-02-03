@@ -51,21 +51,20 @@ var radar_data = [
     "color": "#00A499",
     "items": [
         //  Adopt
-        {pc: {r:  58, t: 138}, movement: "c", name: "node.js (for micro-services or simple front-ends)", docname:"nodejs"}, 
-        {pc: {r:  65, t: 100}, movement: "c", name: "Angular"},
+        {pc: {r:  45, t: 100}, movement: "c", name: "Angular"},
+        {pc: {r:  68, t: 160}, movement: "c", name: "TypeScript"}, 
         {pc: {r:  93, t: 119}, movement: "c", name: "Gulp"},  
-        {pc: {r:  98, t: 160}, movement: "c", name: "TypeScript"}, 
 
         //  Trial
-        {pc: {r: 112, t: 155}, movement: "c", name: "Kotlin"},          
+        {pc: {r: 103, t: 155}, movement: "c", name: "Kotlin"},          
         {pc: {r: 140, t: 115}, movement: "c", name: ".NET Core", docname: "dotnet-core"}, 
+        {pc: {r: 158, t: 117}, movement: "t", name: "Yarn",},
+        {pc: {r: 162, t: 167}, movement: "t", name: "Webpack",},
         {pc: {r: 167, t: 144}, movement: "c", name: "SharePoint framework", docname: "sharepoint-framework"},  
-        {pc: {r: 180, t: 125}, movement: "c", name: "Scala"}, 
         {pc: {r: 189, t: 137}, movement: "c", name: "Cake (C# Make)", docname:"cake"},        
         {pc: {r: 194, t: 167}, movement: "c", name: "Browser Sync", docname: "browser-sync"},
 
         //  Assess
-        {pc: {r: 208, t: 117}, movement: "t", name: "Yarn",},
         {pc: {r: 222, t: 159}, movement: "c", name: "React + Redux", docname: "react"},
         {pc: {r: 259, t: 132}, movement: "c", name: "Python"},
         {pc: {r: 268, t: 162}, movement: "c", name: "Symfony"},      
@@ -73,9 +72,9 @@ var radar_data = [
         {pc: {r: 280, t: 120}, movement: "c", name: "Spark", docname: "spark-java"},
         {pc: {r: 285, t: 159}, movement: "c", name: "TestCafe",},
         {pc: {r: 289, t: 127}, movement: "c", name: "Akka",},
-        {pc: {r: 293, t: 167}, movement: "c", name: "Webpack",},
         
         //  Hold 
+        {pc: {r: 308, t: 125}, movement: "t", name: "Scala"}, 
         {pc: {r: 332, t: 139}, movement: "c", name: "Grunt"},
         {pc: {r: 370, t: 108}, movement: "c", name: "Ruby-on-Rails",}, 
         {pc: {r: 372, t: 143}, movement: "c", name: "Play Framework", docname: "play-framework"},
@@ -106,7 +105,7 @@ var radar_data = [
         {pc: {r: 283, t:  61}, movement: "c", name: "Drupal 8", docname: "drupal"},
         {pc: {r: 284, t:  78}, movement: "c", name: "Windows Server Nano", docname: "windows-server-nano"}, 
         {pc: {r: 285, t:   5}, movement: "c", name: "Amazon DynamoDB", docname: "aws-dynamodb"},  
-        {pc: {r: 296, t:  51}, movement: "t", name: "AWS GreenGrass", docname: "aws-greengrass"},  
+        {pc: {r: 296, t:  51}, movement: "t", name: "Amazon GreenGrass", docname: "aws-greengrass"},  
 
         //  Hold
         {pc: {r: 318, t:  24}, movement: "c", name: "MongoDB"},  
@@ -174,4 +173,5 @@ var radar_data = [
         //  Hold 
         {pc: {r: 358, t: 277}, movement: "c", name: "Native Mobile", docname: "native-mobile"},
     ]
-}];
+}
+];
