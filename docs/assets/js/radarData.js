@@ -124,6 +124,8 @@ var radar_data = [
         //  Trial
         {pc: {r: 123, t: 258}, movement: "c", name: "Elastic Stack", docname: "elastic-stack"},
         {pc: {r: 139, t: 253}, movement: "t", name: "Kubernetes"},
+        {pc: {r: 174, t: 260}, movement: "t", name: "3M Post-It App", docname: "3m-post-it"},
+        {pc: {r: 188, t: 223}, movement: "t", name: "Mural"},
         {pc: {r: 192, t: 251}, movement: "c", name: "Rancher",}, 
 
         //  Assess
@@ -162,6 +164,7 @@ var radar_data = [
         
         //  Trial
         {pc: {r: 110, t: 325}, movement: "c", name: "Session-Based Testing", docname: "sbtm"}, 
+        {pc: {r: 118, t: 288}, movement: "t", name: "Ethnographic Methods", docname: "ethonography"}, 
         {pc: {r: 152, t: 358}, movement: "c", name: "Micro-service architecture", docname: "microservice-architectures"}, 
         {pc: {r: 192, t: 338}, movement: "c", name: "Backend for Front-Ends", docname: "backend-for-frontends"}, 
 
