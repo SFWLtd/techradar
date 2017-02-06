@@ -99,6 +99,7 @@ var radar_data = [
         //  Assess 
         {pc: {r: 209, t:  68}, movement: "c", name: "Powershell DSC", docname: "powershell-dsc"},
         {pc: {r: 210, t:  30}, movement: "t", name: "Native Windows Containers", docname: "docker"},
+        {pc: {r: 216, t:  33}, movement: "t", name: "Azure Logic Apps", docname: "logic-apps"},
         {pc: {r: 225, t:  38}, movement: "c", name: "Cloud Foundry", docname: "cloud-foundry"}, 
         {pc: {r: 244, t:  42}, movement: "c", name: "Amazon SQS", docname: "aws-sqs"},
         {pc: {r: 247, t:  48}, movement: "c", name: "Amazon SNS", docname: "aws-sns"},
