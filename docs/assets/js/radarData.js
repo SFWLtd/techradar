@@ -164,7 +164,7 @@ var radar_data = [
         
         //  Trial
         {pc: {r: 110, t: 325}, movement: "c", name: "Session-Based Testing", docname: "sbtm"}, 
-        {pc: {r: 118, t: 288}, movement: "t", name: "Ethnographic Methods", docname: "ethonography"}, 
+        {pc: {r: 118, t: 288}, movement: "t", name: "Ethnographic Methods", docname: "ethnography"}, 
         {pc: {r: 152, t: 358}, movement: "c", name: "Micro-service architecture", docname: "microservice-architectures"}, 
         {pc: {r: 192, t: 338}, movement: "c", name: "Backend for Front-Ends", docname: "backend-for-frontends"}, 
 
