@@ -65,7 +65,8 @@ var radar_data = [
         {pc: {r: 194, t: 167}, movement: "c", name: "Browser Sync", docname: "browser-sync"},
 
         //  Assess
-        {pc: {r: 222, t: 159}, movement: "c", name: "React + Redux", docname: "react"},
+        {pc: {r: 222, t: 109}, movement: "c", name: "React + Redux", docname: "react"},
+        {pc: {r: 237, t: 104}, movement: "t", name: "Vue.js", docname: "vue"},
         {pc: {r: 259, t: 132}, movement: "c", name: "Python"},
         {pc: {r: 268, t: 162}, movement: "c", name: "Symfony"},      
         {pc: {r: 278, t: 127}, movement: "c", name: "Grails",},

@@ -46,7 +46,7 @@ Front-end
 
 We've started using [Yarn]({{site.baseurl}}/yarn) as an alternative to npm (Node.js's built-in Package Manager) or Bower. In conjunction with [Gulp]({{site.baseurl}}/gulp), our approach to Angular 2+ development is taking more shape. 
 
-By dint of using popular modern libraries, frameworks and approaches, we're also reaping rewards at recent security and pen testing that we've been subject to which has been another plus. 
+By dint of using popular modern libraries, frameworks and approaches, we're also reaping rewards at recent security and pen testing that we've been subject to which has been another plus. [There's](https://www.yammer.com/sfwltd.co.uk/#/Threads/show?threadId=824438938) [been](https://www.yammer.com/sfwltd.co.uk/#/Threads/show?threadId=825273129) [some](https://www.yammer.com/sfwltd.co.uk/#/Threads/show?threadId=836643570) [posts](https://www.yammer.com/sfwltd.co.uk/#/Threads/show?threadId=831371003) about the state of front-end development (in particular in the JavaScript land), and we may want to continue assessments as to whether we persue [React]({{site.baseurl}}/react) or [Vue]({{site.baseurl}}/vue) in addition to [Angular]({{site.baseurl}}/angular) over coming months.
 
 User Centred Design
 -------------------
