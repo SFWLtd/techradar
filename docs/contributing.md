@@ -21,8 +21,10 @@ If you have time available, and Nick doesn’t have anything for you, speak to A
 
 Raising a Pull Request
 ======================
+
 Adding a new blip
 -----------------
+
 To add a new blip to the radar, currently two things need to be done:
 0. Create a markdown page under the corresponding section (_approaches, _languagesandframeworks, _tools, or _platforms). Copy an existing blip for guidance. To display a Yammer feed about the blip add in the corresponding Yammer Hashtag Topic Id in the "yammerid" field.
 0. [Edit the radar data - radarData.js](https://github.com/SFWLtd/techradar/edit/master/docs/assets/js/radarData.js). Add the blip under the corresponding category (for ease of use these are ordered from most central to furthest out and grouped into the adopt, trial, assess and hold categories as well as by quadrant). The blip on the radar should automatically link through to the page created above if the name field is identical - if not you can provide an alternative alias using the "docname" field. [Here's ab example previous commit of vue.js being added to the radar](https://github.com/SFWLtd/techradar/commit/24fa1e19ab04cef38781d45f946d82800630a6f8)
