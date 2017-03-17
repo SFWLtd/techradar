@@ -53,14 +53,15 @@ var radar_data = [
         //  Adopt
         {pc: {r:  45, t: 100}, movement: "c", name: "Angular"},
         {pc: {r:  68, t: 160}, movement: "c", name: "TypeScript"}, 
-        {pc: {r:  93, t: 119}, movement: "c", name: "Gulp"},  
+        {pc: {r:  83, t: 119}, movement: "c", name: "Gulp"},  
+        {pc: {r:  92, t: 155}, movement: "t", name: "Kotlin"},          
 
         //  Trial
-        {pc: {r: 103, t: 155}, movement: "c", name: "Kotlin"},          
         {pc: {r: 140, t: 115}, movement: "c", name: ".NET Core", docname: "dotnet-core"}, 
         {pc: {r: 158, t: 117}, movement: "c", name: "Yarn",},
         {pc: {r: 162, t: 167}, movement: "c", name: "Webpack",},
         {pc: {r: 167, t: 144}, movement: "c", name: "SharePoint framework", docname: "sharepoint-framework"},  
+        {pc: {r: 175, t: 159}, movement: "t", name: "TestCafe",},
         {pc: {r: 189, t: 137}, movement: "c", name: "Cake (C# Make)", docname:"cake"},        
         {pc: {r: 194, t: 167}, movement: "c", name: "Browser Sync", docname: "browser-sync"},
 
@@ -71,7 +72,6 @@ var radar_data = [
         {pc: {r: 268, t: 162}, movement: "c", name: "Symfony"},      
         {pc: {r: 278, t: 127}, movement: "c", name: "Grails",},
         {pc: {r: 280, t: 120}, movement: "c", name: "Spark", docname: "spark-java"},
-        {pc: {r: 285, t: 159}, movement: "c", name: "TestCafe",},
         {pc: {r: 289, t: 127}, movement: "c", name: "Akka",},
         
         //  Hold 
@@ -89,7 +89,6 @@ var radar_data = [
     "items": [
         //  Adopt
         {pc: {r:  73, t:  61}, movement: "c", name: "Joomla!", docname: "joomla"},
-        {pc: {r:  93, t:  58}, movement: "c", name: "VSTS"},
 
         //  Trial
         {pc: {r: 158, t:  21}, movement: "c", name: "Azure SQL Database", docname: "azure-sqldb"}, 
@@ -121,7 +120,7 @@ var radar_data = [
     "items": [
         //  Adopt
         {pc: {r:  65, t: 240}, movement: "c", name: "Docker"}, 
-        {pc: {r:  86, t: 185}, movement: "c", name: "Balsamiq",}, 
+        {pc: {r:  76, t: 190}, movement: "t", name: "Axure",},
 
         //  Trial
         {pc: {r: 123, t: 258}, movement: "c", name: "Elastic Stack", docname: "elastic-stack"},
@@ -132,22 +131,23 @@ var radar_data = [
         {pc: {r: 192, t: 251}, movement: "c", name: "Rancher",}, 
 
         //  Assess
-        {pc: {r: 206, t: 190}, movement: "c", name: "Axure",},
         {pc: {r: 219, t: 245}, movement: "c", name: "Minikube"},
         {pc: {r: 228, t: 239}, movement: "c", name: "Vagrant"},
+        {pc: {r: 235, t: 189}, movement: "t", name: "Adobe XD", docname: "adobe-xd"}, 
         {pc: {r: 243, t: 258}, movement: "c", name: "New Relic", docname: "new-relic"}, 
         {pc: {r: 250, t: 220}, movement: "c", name: "Spectre",}, 
-        {pc: {r: 255, t: 189}, movement: "c", name: "Concourse",}, 
+        {pc: {r: 255, t: 249}, movement: "c", name: "Concourse",}, 
         {pc: {r: 259, t: 200}, movement: "c", name: "Tenon.io", docname: "tenonio"},  
         {pc: {r: 267, t: 225}, movement: "c", name: "NVivo suite", docname: "nvivo"}, 
         {pc: {r: 269, t: 190}, movement: "c", name: "LambdaCD",},
+        {pc: {r: 275, t: 189}, movement: "t", name: "Adobe Creative Suite", docname: "adobe-creative-suite"}, 
         {pc: {r: 282, t: 240}, movement: "c", name: "Habitat",},
         {pc: {r: 288, t: 250}, movement: "c", name: "Terraform",},  
         {pc: {r: 291, t: 200}, movement: "c", name: "Pa11y"},
 
         //  Hold
         {pc: {r: 301, t: 204}, movement: "c", name: "Protractor",}, 
-        {pc: {r: 329, t: 184}, movement: "c", name: "Jenkins 2.0", docname: "jenkins2"}, 
+        {pc: {r: 329, t: 234}, movement: "c", name: "Jenkins 2.0", docname: "jenkins2"}, 
         {pc: {r: 336, t: 261}, movement: "c", name: "Chef",}, 
         {pc: {r: 345, t: 266}, movement: "c", name: "Puppet",},
         {pc: {r: 383, t: 228}, movement: "c", name: "Rocket.Chat", docname: "rocket-chat"}, 

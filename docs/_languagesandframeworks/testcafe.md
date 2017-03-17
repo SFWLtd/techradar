@@ -1,7 +1,7 @@
 ---
 layout: blip
 name: "TestCafe"
-status: "Assess"
+status: "Trial"
 first_added: "October 2016"
 site: https://testcafe.devexpress.com/
 ---

@@ -1,8 +1,8 @@
 ---
 layout: blip
 name: "Balsamiq Mockups"
-status: "Adopt"
+status: "Adopted"
 first_added: "July 2016"
 site: https://balsamiq.com/
 ---
-Rapid wireframing tool.
+Another rapid wireframing tool.
